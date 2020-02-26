@@ -1,0 +1,25 @@
+# n is number of disk
+# A is source bar
+# B is temporary bar to help movement
+# C is destination bar
+
+def hanoi(n , A , B , C):
+    if n==1:
+        movedisk (A , C)
+    else:
+            hanoi (n-1, A , C , B)
+            movedisk (A , C)
+            hanoi (n-1, B , A , C)
+            
+def movedisk (A , C):
+    print('moving disk from', A ,'to', C)
+    
+    print(hanoi(3, 'A', 'B' , 'C'))
+    moving disk from A to C
+    moving disk from A to B
+    moving disk from C to B
+    moving disk from A to C
+    moving disk from B to A
+    moving disk from B to C
+    moving disk from A to C
+    None
